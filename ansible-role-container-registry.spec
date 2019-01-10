@@ -17,8 +17,12 @@ BuildArch:      noarch
 BuildRequires:  git
 BuildRequires:  python2-devel
 BuildRequires:  python2-setuptools
-BuildRequires:  python-d2to1
 BuildRequires:  python2-pbr
+%if 0%{?fedora} || 0%{?rhel} > 7
+BuildRequires:  python2-d2to1
+%else
+BuildRequires:  python-d2to1
+%endif
 
 Requires: ansible
 

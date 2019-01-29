@@ -35,7 +35,11 @@ BuildRequires:  python-d2to1
 Requires:       ansible
 %else
 BuildRequires:  python%{pyver}-d2to1
-Requires:       ansible-python3
+%if 0%{?rhel} > 7
+Requires: ansible
+%else
+Requires: ansible-python3
+%endif
 %endif
 
 

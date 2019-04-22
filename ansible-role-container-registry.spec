@@ -1,3 +1,8 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit d6a749ace464ad77684874d9e4216d9a3ef280e2
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
@@ -14,14 +19,14 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           %{rolename}
-Version:        XXX
-Release:        XXX
+Version:        1.0.1
+Release:        0.1%{?alphatag}%{?dist}
 Summary:        Ansible role to deploy a container registry.
 
 Group:          System Environment/Base
 License:        ASL 2.0
-URL:            https://git.openstack.org/cgit/openstack/ansible-role-container-registry
-Source0:        https://tarballs.openstack.org/%{rolename}/%{rolename}-%{upstream_version}.tar.gz
+URL:            https://opendev.org/openstack/ansible-role-container-registry
+Source0:        https://github.com/openstack/%{rolename}/archive/%{commit}.tar.gz#/%{rolename}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  git
@@ -69,4 +74,7 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 1.0.1-0.1.d6a749agit
+- Update to pre-release 1.0.1 (d6a749ace464ad77684874d9e4216d9a3ef280e2)
+
 

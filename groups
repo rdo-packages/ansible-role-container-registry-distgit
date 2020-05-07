@@ -1,9 +1,9 @@
 # UUID Group Name
 global:Registered-Users	Registered Users
-e75a4ed55885f837ddf73f8fb3ac62054788fbea	openstack/ansible-role-container-registry-ptl
 4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
-global:Anonymous-Users	Anonymous Users
-a8932606b0f40a549ab1eec0066b4526385e67b7	openstack/ansible-role-container-registry-core
-05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+e75a4ed55885f837ddf73f8fb3ac62054788fbea	openstack/ansible-role-container-registry-ptl
 401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+global:Anonymous-Users	Anonymous Users
 6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+a8932606b0f40a549ab1eec0066b4526385e67b7	openstack/ansible-role-container-registry-core

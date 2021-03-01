@@ -14,7 +14,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           %{rolename}
-Version:        1.1.0
+Version:        1.3.0
 Release:        1%{?dist}
 Summary:        Ansible role to deploy a container registry.
 
@@ -63,6 +63,9 @@ export SKIP_PIP_INSTALL=1
 
 
 %changelog
+* Mon Mar 01 2021 Alfredo Moralejo <amoralej@redhat.com> 1.3.0-1
+- Update to 1.3.0
+
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 1.1.0-1
 - Update to 1.1.0
 
